@@ -155,7 +155,7 @@ export const projects: Project[] = [
     kicker: "Proteus, Digital Logic",
     summary:
       "A 16-bit computer designed and simulated from scratch using discrete logic.",
-    image: "/cm.jpeg",
+    image: "/cm.webp",
     url: "https://github.com/hatemhossamghazy/Basic-Computer",
     details: [
       "Designed and simulated a 16-bit computer from scratch on Proteus using fundamental logic gates and discrete components.",
