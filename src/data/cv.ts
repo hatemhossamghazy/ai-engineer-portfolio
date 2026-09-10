@@ -6,6 +6,9 @@ export const profile = {
   location: "Kafr El-Sheikh, Fowa, Egypt",
   phone: "01018170410",
   email: "hatm51477@gmail.com",
+  whatsapp: "01018170410", // اكتب الرقم بدون علامة + لاستخدامه في رابط الواتساب المباشر
+  github: "https://github.com/hatemhossamghazy",
+  linkedin: "https://www.linkedin.com/in/hatem-hossam-ghazy-06b112345/",
   image: "/WhatsApp Image 2026-03-25 at 11.45.17 PM.jpeg"
 };
 
