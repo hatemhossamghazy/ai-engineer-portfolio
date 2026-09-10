@@ -80,7 +80,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  
   {
     name: "Cardiovascular Disease Prediction",
     kicker: "Ensemble Learning & ML Pipelines",
