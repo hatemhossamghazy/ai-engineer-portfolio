@@ -1,34 +1,78 @@
-import { Mail } from "lucide-react";
-import { Reveal } from "./Reveal";
+import { Mail, Phone, MessageSquare, Github, Linkedin } from "lucide-react";
+import { Section } from "./Reveal";
 import { profile } from "@/data/cv";
 
 export function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden">
-      <div className="hero-glow absolute inset-0" />
-      <div className="relative mx-auto w-full max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
-        <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">Contact</p>
-          <h2 className="mt-3 max-w-4xl text-3xl font-semibold leading-tight sm:text-5xl">
-            Looking for a driven engineer to elevate your data and AI capabilities? Let’s build something extraordinary
-          </h2>
-        </Reveal>
+    <Section
+      id="contact"
+      eyebrow="Contact"
+      title="Let’s build something extraordinary."
+    >
+      <div className="mt-8 max-w-3xl space-y-8">
+        {/* Contact Info List */}
+        <div className="flex flex-col space-y-4">
+          {/* Email */}
+          <a
+            href={`mailto:${profile.email}`}
+            className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
+          >
+            <Mail className="size-5 text-primary" />
+            <span>{profile.email}</span>
+          </a>
 
-        <Reveal delay={0.1}>
-          <div className="mt-9 flex flex-wrap gap-3">
+          {/* Phone */}
+          {profile.phone && (
             <a
-              href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-glow)] transition-transform hover:scale-[1.03]"
+              href={`tel:${profile.phone}`}
+              className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
             >
-              <Mail className="size-4" /> Get in touch
+              <Phone className="size-5 text-primary" />
+              <span>{profile.phone}</span>
             </a>
-          </div>
-        </Reveal>
+          )}
 
-        <footer className="mt-20 border-t border-border pt-6 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} {profile.name} — {profile.title}
-        </footer>
+          {/* WhatsApp */}
+          {profile.whatsapp && (
+            <a
+              href={`https://wa.me/${profile.whatsapp}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
+            >
+              <MessageSquare className="size-5 text-primary" />
+              <span>WhatsApp</span>
+            </a>
+          )}
+        </div>
+
+        {/* Social Links */}
+        <div className="flex items-center gap-4 pt-4 border-t border-border/40">
+          {profile.github && (
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub Profile"
+              className="rounded-full border border-border p-3 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              <Github className="size-5" />
+            </a>
+          )}
+
+          {profile.linkedin && (
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn Profile"
+              className="rounded-full border border-border p-3 text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              <Linkedin className="size-5" />
+            </a>
+          )}
+        </div>
       </div>
-    </section>
+    </Section>
   );
 }
