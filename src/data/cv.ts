@@ -1,3 +1,5 @@
+import spamImg from "/public/spam.jpeg";     // ضع اسم صورتك الأولى هنا
+import agnaImg from "/public/agna.jpeg";     // ضع اسم صورتك الثانية هنا
 export interface Profile {
   name: string;
   title: string;
