@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import cvAsset from "@/assets/cv.asset.json";
 
 const links = [
   { id: "home", label: "Home" },
@@ -70,13 +69,6 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
-            href={cvAsset.url}
-            download="Hatem_Hossam_Ghazy_CV.docx"
-            className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-transform hover:scale-[1.03] sm:inline-flex"
-          >
-            Download CV
-          </a>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -104,15 +96,6 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href={cvAsset.url}
-                download="Hatem_Hossam_Ghazy_CV.docx"
-                className="mt-2 block rounded-full bg-primary px-4 py-3 text-center text-sm font-medium text-primary-foreground"
-              >
-                Download CV
-              </a>
-            </li>
           </ul>
         </div>
       ) : null}

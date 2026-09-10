@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail, MapPin } from "lucide-react";
+import { ArrowDown, Mail, MapPin, UserRound } from "lucide-react";
 import { NeuralBackground } from "./NeuralBackground";
 import { profile } from "@/data/cv";
-import cvAsset from "@/assets/cv.asset.json";
 
 const rise = (delay: number) => ({
   initial: { opacity: 0, y: 18 },
@@ -15,9 +14,8 @@ export function Hero() {
     <section id="home" className="relative flex min-h-[92vh] items-center overflow-hidden">
       <div className="hero-glow absolute inset-0" />
       <NeuralBackground />
-      <div
-        className="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-16 sm:px-8"
-      >
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 pt-28 pb-16 sm:px-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16">
+        <div>
         <motion.p
           {...rise(0.05)}
           className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3 py-1.5 text-xs text-muted-foreground"
@@ -55,18 +53,24 @@ export function Hero() {
             View Projects <ArrowDown className="size-4" />
           </a>
           <a
-            href={cvAsset.url}
-            download="Hatem_Hossam_Ghazy_CV.docx"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-5 py-3 text-sm font-medium transition-colors hover:bg-secondary"
-          >
-            <Download className="size-4" /> Download CV
-          </a>
-          <a
             href={`mailto:${profile.email}`}
             className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <Mail className="size-4" /> Email me
           </a>
+        </motion.div>
+        </div>
+
+        <motion.div
+          {...rise(0.26)}
+          aria-label="Profile photo placeholder"
+          className="glass-panel relative mx-auto flex aspect-square w-full max-w-56 items-center justify-center overflow-hidden rounded-full shadow-[var(--shadow-glow)] sm:max-w-64 lg:max-w-none"
+        >
+          <div className="absolute inset-3 rounded-full border border-primary/20" />
+          <div className="flex flex-col items-center gap-3 text-muted-foreground">
+            <UserRound className="size-20 stroke-[1.25] text-primary/70" aria-hidden="true" />
+            <span className="text-xs font-medium uppercase tracking-[0.2em]">Profile photo</span>
+          </div>
         </motion.div>
       </div>
     </section>
