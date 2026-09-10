@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    // تحديد مسار الرابط الخاص بمستودع GitHub Pages
+    base: "/hatem-hossam-ghazy-portfolio/",
+  },
 });
