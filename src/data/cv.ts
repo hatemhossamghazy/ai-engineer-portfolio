@@ -85,7 +85,7 @@ export const projects: Project[] = [
     kicker: "DenseNet, LSTM",
     summary:
       "End-to-end sequence-generation pipeline that describes images in natural language.",
-    image: "/icg.jpeg",
+    image: "/icg.webp",
     details: [
       "Implemented DenseNet as a convolutional feature extractor to capture visual features from input images.",
       "Combined the extracted features with an LSTM network to generate descriptive natural-language captions in an end-to-end sequence-generation pipeline.",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     kicker: "Ensemble Learning & ML Pipelines",
     summary:
       "Ensemble pipeline predicting cardiovascular disease risk from health data.",
-    image: "/cardio.jpeg",
+    image: "/cardio.webp",
     details: [
       "Performed exploratory data analysis (EDA) and data preprocessing on a cardiovascular health dataset to prepare it for modeling.",
       "Built an ensemble learning pipeline to predict disease risk, evaluating model performance using metrics such as precision, recall, and F1-score.",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     kicker: "NLP, NLTK, spaCy",
     summary:
       "Text-classification model separating spam from legitimate messages.",
-    image: "/spam.jpeg",
+    image: "/spam.webp",
     details: [
       "Cleaned and preprocessed raw text data using regular expressions and standard NLP techniques to prepare it for classification.",
       "Applied NLTK and spaCy for tokenization and text processing, then trained a classification model to distinguish spam from legitimate messages.",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     kicker: "Full-Stack Marketplace & Service Platform",
     summary:
       "Marketplace platform for tools and services, with AI-driven smart search.",
-    image: "/agna.jpeg",
+    image: "/agna.png",
     details: [
       "Led a technical team to develop a marketplace platform for tools and services using Node.js, React, and PostgreSQL.",
       "Implemented AI-driven smart search and integrated Redis caching to optimize API performance.",
