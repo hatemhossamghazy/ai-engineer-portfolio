@@ -13,7 +13,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    // تحديد مسار الرابط الخاص بمستودع GitHub Pages
-    base: "/hatem-hossam-ghazy-portfolio/",
+    // المسار المباشر والمطابق لاسم المستودع الحقيقي
+    base: "/hatem-ghazy-portfolio-/",
   },
 });
