@@ -7,8 +7,17 @@ export function Contact() {
     <Section
       id="contact"
       eyebrow="Contact"
-      title="Let’s build something extraordinary."
     >
+      <div className="mt-4 max-w-3xl space-y-8">
+        {/* الكلام المطلوب إضافته قبل العنوان الرئيسي */}
+        <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground/90">
+          Looking for a driven engineer to elevate your data and AI capabilities?
+        </p>
+
+        {/* Headline */}
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+          Let’s build something extraordinary.
+        </h2>
       <div className="mt-8 max-w-3xl space-y-8">
         {/* Contact Info List */}
         <div className="flex flex-col space-y-4">
