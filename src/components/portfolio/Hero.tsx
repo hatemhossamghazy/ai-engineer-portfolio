@@ -69,7 +69,7 @@ export function Hero() {
         >
           <div className="absolute inset-3 z-10 rounded-full border border-primary/20 pointer-events-none" />
           <img
-            src={(profile as any).avatar || "/profile.jpg"}
+            src={(profile as any).avatar || "/profile.jpeg"}
             alt={profile.name}
             loading="eager"
             decoding="async"
