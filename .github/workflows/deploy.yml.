@@ -31,41 +31,18 @@ jobs:
       - name: Install dependencies
         run: npm ci || npm install
 
-      - name: Build project
-        run: npm run build
+      - name: Build Client Only
+        run: npx vite build
 
-      - name: Generate SPA Index HTML
+      - name: Setup Pages & Nojekyll
         run: |
-          touch ./.output/public/.nojekyll
-          
-          # إيجاد اسم ملف الـ JS الرئيسي الناتج من البناء
-          JS_FILE=$(ls ./.output/public/assets/index-*.js | head -n 1 | xargs basename)
-          CSS_FILE=$(ls ./.output/public/assets/styles-*.css | head -n 1 | xargs basename)
-          
-          # إنشاء index.html موجه للملفات التفاعلية تلقائياً
-          cat <<EOF > ./.output/public/index.html
-          <!DOCTYPE html>
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-              <title>Hatem Hossam Ghazy | Portfolio</title>
-              <link rel="stylesheet" href="/hatem-ghazy-portfolio-/assets/$CSS_FILE" />
-            </head>
-            <body>
-              <div id="root"></div>
-              <script type="module" src="/hatem-ghazy-portfolio-/assets/$JS_FILE"></script>
-            </body>
-          </html>
-          EOF
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+          touch ./dist/.nojekyll
+          cp ./dist/index.html ./dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './.output/public'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
