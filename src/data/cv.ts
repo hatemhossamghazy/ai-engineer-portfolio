@@ -1,6 +1,6 @@
-// استيراد الصور بأسلوب Vite المباشر من مجلد public لضمان ربطها في الـ Build
-import spamImg from "/spam.jpeg?url";
-import agnaImg from "/agna.jpeg?url";
+// 1. تحديث امتداد الاستيرادات ليتطابق مع اسم الملفات الحقيقي
+import spamImg from "/spam.webp?url";
+import agnaImg from "/agna.png?url";
 
 export interface Profile {
   name: string;
