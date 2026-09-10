@@ -1,5 +1,7 @@
-import spamImg from "/public/spam.jpeg";     // ضع اسم صورتك الأولى هنا
-import agnaImg from "/public/agna.jpeg";     // ضع اسم صورتك الثانية هنا
+// استيراد الصور بأسلوب Vite المباشر من مجلد public لضمان ربطها في الـ Build
+import spamImg from "/spam.jpeg?url";
+import agnaImg from "/agna.jpeg?url";
+
 export interface Profile {
   name: string;
   title: string;
@@ -128,7 +130,6 @@ export const projects: Project[] = [
     kicker: "NLP, NLTK, spaCy",
     summary:
       "Text-classification model separating spam from legitimate messages.",
-    image: "/spam.jpeg",
     image: spamImg,
     details: [
       "Cleaned and preprocessed raw text data using regular expressions and standard NLP techniques to prepare it for classification.",
