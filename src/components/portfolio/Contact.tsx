@@ -4,12 +4,9 @@ import { profile } from "@/data/cv";
 
 export function Contact() {
   return (
-    <Section
-      id="contact"
-      eyebrow="Contact"
-    >
+    <Section id="contact" eyebrow="Contact">
       <div className="mt-4 max-w-3xl space-y-8">
-        {/* الكلام المطلوب إضافته قبل العنوان الرئيسي */}
+        {/* النص السابقى للعنوان الرئيسي */}
         <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground/90">
           Looking for a driven engineer to elevate your data and AI capabilities?
         </p>
@@ -18,40 +15,48 @@ export function Contact() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
           Let’s build something extraordinary.
         </h2>
-      <div className="mt-8 max-w-3xl space-y-8">
+
         {/* Contact Info List */}
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 pt-4">
           {/* Email */}
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
-          >
-            <Mail className="size-5 text-primary" />
-            <span>{profile.email}</span>
-          </a>
+          {profile.email && (
+            <div>
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
+              >
+                <Mail className="size-5 text-primary" />
+                <span>{profile.email}</span>
+              </a>
+            </div>
+          )}
 
           {/* Phone */}
           {profile.phone && (
-            <a
-              href={`tel:${profile.phone}`}
-              className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Phone className="size-5 text-primary" />
-              <span>{profile.phone}</span>
-            </a>
+            <div>
+              <a
+                href={`tel:${profile.phone}`}
+                className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
+              >
+                <Phone className="size-5 text-primary" />
+                <span>{profile.phone}</span>
+              </a>
+            </div>
           )}
 
           {/* WhatsApp */}
           {profile.whatsapp && (
-            <a
-              href={`https://wa.me/${profile.whatsapp}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
-            >
-              <MessageSquare className="size-5 text-primary" />
-              <span>WhatsApp</span>
-            </a>
+            <div>
+              <a
+                href={`https://wa.me/${profile.whatsapp}`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 text-base text-muted-foreground transition-colors hover:text-primary"
+              >
+                <MessageSquare className="size-5 text-primary" />
+                <span>WhatsApp</span>
+              </a>
+            </div>
           )}
         </div>
 
