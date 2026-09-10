@@ -1,21 +1,15 @@
 import { Section, Reveal } from "./Reveal";
-import { about } from "@/data/cv";
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About" title="Engineering intelligence, end to end" description={about.summary}>
-      <div className="grid gap-5 md:grid-cols-3">
-        {about.points.map((p, i) => (
-          <Reveal key={p.title} delay={i * 0.08}>
-            <div className="glass-panel h-full rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1">
-              <h3 className="text-base font-semibold text-foreground">{p.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
-            </div>
-          </Reveal>
-        ))}
-      </div>
-      <Reveal delay={0.15}>
-        <p className="mt-8 max-w-3xl text-base leading-relaxed text-muted-foreground">{about.focus}</p>
+    <Section id="about" eyebrow="About" title="About me">
+      <Reveal delay={0.08}>
+        <div className="glass-panel max-w-4xl space-y-5 rounded-2xl p-6 text-base leading-relaxed text-muted-foreground sm:p-8">
+          <p>I’m a <strong className="font-medium text-foreground">Computer Engineer specializing in Data Science and Machine Learning.</strong></p>
+          <p>Growing up, my world was centered around sports, mathematics, and the power of numbers. That naturally led me to Computer Engineering—a field where logic, structure, and analytical thinking align perfectly.</p>
+          <p><strong className="font-medium text-foreground">Discipline and continuous growth</strong> are embedded in my mentality. I work every single day to stay one step ahead, approaching challenges with a strong sense of responsibility and a high-performance mindset.</p>
+          <p>For me, Data Science and Machine Learning are the ultimate arena: a space where mathematical accuracy meets strategic thinking to solve complex problems and <strong className="font-medium text-foreground">engineer scalable, impactful systems.</strong></p>
+        </div>
       </Reveal>
     </Section>
   );

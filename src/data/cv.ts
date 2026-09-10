@@ -2,7 +2,7 @@ export const profile = {
   name: "Hatem Hossam Ghazy",
   title: "Machine Learning Engineer",
   tagline:
-    "I build end-to-end machine learning and deep learning pipelines in Python that turn raw data into practical predictions.",
+    "I build end-to-end machine learning and deep learning pipelines in Python that transform Raw Data into Predictive Power & Autonomous Solutions.",
   location: "Kafr El-Sheikh, Fowa, Egypt",
   phone: "01018170410",
   email: "hatm51477@gmail.com",
@@ -30,7 +30,7 @@ export const about = {
 };
 
 export const skills: { category: string; items: string[] }[] = [
-  { category: "Programming", items: ["Python"] },
+  { category: "Programming", items: ["Python", "C++", "SQL"] },
   {
     category: "Machine Learning & Data Science",
     items: [
@@ -39,6 +39,8 @@ export const skills: { category: string; items: string[] }[] = [
       "Model Evaluation",
       "Hyperparameter Tuning",
       "Ensemble Learning",
+      "EDA",
+      "Feature Engineering",
     ],
   },
   {
@@ -58,7 +60,7 @@ export const skills: { category: string; items: string[] }[] = [
   },
   {
     category: "Data Libraries",
-    items: ["Pandas", "NumPy", "Matplotlib", "Scikit-Learn"],
+    items: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-Learn"],
   },
   {
     category: "Databases & Caching",
@@ -72,6 +74,8 @@ export type Project = {
   summary: string;
   details: string[];
   tech: string[];
+  image?: string;
+  url?: string;
 };
 
 export const projects: Project[] = [
