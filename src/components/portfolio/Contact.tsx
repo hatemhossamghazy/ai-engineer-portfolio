@@ -3,18 +3,18 @@ import { Section } from "./Reveal";
 import { profile } from "@/data/cv";
 
 export function Contact() {
-  return (
-    <Section
-      id="contact"
-      eyebrow="Contact"
-      title="Let’s build something extraordinary."
-    >
-      <div className="mt-4 max-w-3xl space-y-8">
-        {/* النص السابقي للعنوان الرئيسي */}
-        <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground/90">
+ return (
+    <Section id="contact" eyebrow="Contact">
+      <div className="mt-4 max-w-3xl space-y-6">
+        {/* الجملة الأولى بخط عادي */}
+        <p className="text-xl md:text-2xl font-normal leading-relaxed text-muted-foreground">
           Looking for a driven engineer to elevate your data and AI capabilities?
         </p>
 
+        {/* الجملة الثانية بخط عريض (Bold Headline) */}
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+          Let’s build something extraordinary.
+        </h2>
         {/* Contact Info List */}
         <div className="flex flex-col space-y-4 pt-2">
           {/* Email */}
