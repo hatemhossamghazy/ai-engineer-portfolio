@@ -34,8 +34,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Add .nojekyll
-        run: touch ./.output/public/.nojekyll
+      - name: Create SPA Entry & Nojekyll
+        run: |
+          touch ./.output/public/.nojekyll
+          if [ -f index.html ]; then
+            cp index.html ./.output/public/index.html
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
