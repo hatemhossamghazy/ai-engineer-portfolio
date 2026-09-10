@@ -7,33 +7,18 @@ import { projects, type Project } from "@/data/cv";
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const [open, setOpen] = useState(false);
 
-  // دالة لتصحيح مسار الصورة وضمان عمله مع Vite وفي جميع بيئات الاستضافة
-  const getImageUrl = (imagePath?: string) => {
-    if (!imagePath) return null;
-    if (imagePath.startsWith("http")) return imagePath;
-    const cleanPath = imagePath.startsWith("/") ? imagePath.slice(1) : imagePath;
-    return `${import.meta.env.BASE_URL}${cleanPath}`;
-  };
-
-  const imageSrc = getImageUrl(project.image);
-
   return (
-    // تم إلغاء الشرط lg:col-span-2 لجعل حجم أول مشروع متساويًا تمامًا مع بقية المشاريع
     <Reveal delay={index * 0.06}>
       <article className="glass-panel group relative h-full overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] sm:p-7">
         <div className="pointer-events-none absolute inset-x-0 -top-24 h-40 opacity-0 transition-opacity duration-500 group-hover:opacity-100 hero-glow" />
         <div className="relative">
-          {/* تم تقليل الارتفاع والنسبة لجعل إطار المعاينة متناسقًا */}
           <div className="mb-6 aspect-[16/9] overflow-hidden rounded-xl border border-border bg-secondary/40">
-            {imageSrc ? (
+            {project.image ? (
               <img
-                src={imageSrc}
+                src={project.image}
                 alt={`${project.name} project`}
                 className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 loading="eager"
-                onError={(e) => {
-                  console.error("Failed to load image for project:", project.name, imageSrc);
-                }}
               />
             ) : (
               <div className="flex size-full flex-col items-center justify-center gap-2 text-muted-foreground">
@@ -42,7 +27,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               </div>
             )}
           </div>
-          
+
           <p className="text-xs uppercase tracking-[0.2em] text-primary">{project.kicker}</p>
           <h3 className="mt-2 text-xl font-semibold sm:text-2xl">
             {project.name}
