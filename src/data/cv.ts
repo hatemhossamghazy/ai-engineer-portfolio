@@ -98,6 +98,7 @@ export const projects: Project[] = [
     summary:
       "Ensemble pipeline predicting cardiovascular disease risk from health data.",
     image: "/cardio.webp",
+    url:"https://github.com/hatemhossamghazy/Cardiovascular-Disease-Project",
     details: [
       "Performed exploratory data analysis (EDA) and data preprocessing on a cardiovascular health dataset to prepare it for modeling.",
       "Built an ensemble learning pipeline to predict disease risk, evaluating model performance using metrics such as precision, recall, and F1-score.",
@@ -110,6 +111,7 @@ export const projects: Project[] = [
     summary:
       "Text-classification model separating spam from legitimate messages.",
     image: "/spam.jpeg",
+    url:"https://lnkd.in/p/e8y7RTwH",
     details: [
       "Cleaned and preprocessed raw text data using regular expressions and standard NLP techniques to prepare it for classification.",
       "Applied NLTK and spaCy for tokenization and text processing, then trained a classification model to distinguish spam from legitimate messages.",
@@ -122,6 +124,7 @@ export const projects: Project[] = [
     summary:
       "Marketplace platform for tools and services, with AI-driven smart search.",
     image: "/agna.jpeg",
+    url:"https://github.com/hatemhossamghazy/Agna_Shakosh",
     details: [
       "Led a technical team to develop a marketplace platform for tools and services using Node.js, React, and PostgreSQL.",
       "Implemented AI-driven smart search and integrated Redis caching to optimize API performance.",
@@ -134,6 +137,7 @@ export const projects: Project[] = [
     summary:
       "A 16-bit computer designed and simulated from scratch using discrete logic.",
     image: "/cm.jpeg",
+    url:"https://github.com/hatemhossamghazy/Basic-Computer",
     details: [
       "Designed and simulated a 16-bit computer from scratch on Proteus using fundamental logic gates and discrete components.",
       "Built the complete ALU, common bus system, hardware registers, and hardwired control unit to execute the full Fetch-Decode-Execute cycle.",
