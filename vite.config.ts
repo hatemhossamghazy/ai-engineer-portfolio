@@ -7,11 +7,4 @@ export default defineConfig({
   vite: {
     base: "/hatem-ghazy-portfolio-/",
   },
-  nitro: {
-    preset: "static", // تحويل الناتج لموقع ساكن يستخرج ملفات HTML
-    static: true,
-    prerender: {
-      routes: ["/"], // توليد الصفحة الرئيسية تلقائياً
-    },
-  },
 });
