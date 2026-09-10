@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, MapPin, UserRound } from "lucide-react";
+import { ArrowDown, Mail, MapPin } from "lucide-react";
 import { NeuralBackground } from "./NeuralBackground";
 import { profile } from "@/data/cv";
 
@@ -64,16 +64,15 @@ export function Hero() {
         {/* كارت صورة البروفايل */}
         <motion.div
           {...rise(0.26)}
-          aria-label="Profile photo"
           className="glass-panel relative mx-auto flex aspect-square w-full max-w-56 items-center justify-center overflow-hidden rounded-full shadow-[var(--shadow-glow)] sm:max-w-64 lg:max-w-none"
         >
           <div className="absolute inset-3 z-10 rounded-full border border-primary/20 pointer-events-none" />
           <img
-            src={(profile as any).avatar || "/profile.jpeg"}
-            alt={profile.name}
+            src="/profile.jpeg"
+            alt="Hatem Hossam Ghazy"
             loading="eager"
             decoding="async"
-            className="h-full w-full object-cover rounded-full z-0"
+            className="h-full w-full object-cover rounded-full z-0 relative"
           />
         </motion.div>
       </div>
