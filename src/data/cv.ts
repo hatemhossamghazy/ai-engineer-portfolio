@@ -109,7 +109,7 @@ export const projects: Project[] = [
     kicker: "NLP, NLTK, spaCy",
     summary:
       "Text-classification model separating spam from legitimate messages.",
-    image: "/spam.webp",
+    image: "/spam.jpeg",
     details: [
       "Cleaned and preprocessed raw text data using regular expressions and standard NLP techniques to prepare it for classification.",
       "Applied NLTK and spaCy for tokenization and text processing, then trained a classification model to distinguish spam from legitimate messages.",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     kicker: "Full-Stack Marketplace & Service Platform",
     summary:
       "Marketplace platform for tools and services, with AI-driven smart search.",
-    image: "/agna.png",
+    image: "/agna.jpeg",
     details: [
       "Led a technical team to develop a marketplace platform for tools and services using Node.js, React, and PostgreSQL.",
       "Implemented AI-driven smart search and integrated Redis caching to optimize API performance.",
