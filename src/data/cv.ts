@@ -80,18 +80,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    name: "Image Caption Generation",
-    kicker: "DenseNet, LSTM",
-    summary:
-      "End-to-end sequence-generation pipeline that describes images in natural language.",
-    image: "/icg.webp",
-    details: [
-      "Implemented DenseNet as a convolutional feature extractor to capture visual features from input images.",
-      "Combined the extracted features with an LSTM network to generate descriptive natural-language captions in an end-to-end sequence-generation pipeline.",
-    ],
-    tech: ["Python", "DenseNet", "CNN", "LSTM", "Deep Learning"],
-  },
+  
   {
     name: "Cardiovascular Disease Prediction",
     kicker: "Ensemble Learning & ML Pipelines",
@@ -104,6 +93,18 @@ export const projects: Project[] = [
       "Built an ensemble learning pipeline to predict disease risk, evaluating model performance using metrics such as precision, recall, and F1-score.",
     ],
     tech: ["Python", "Ensemble Learning", "Scikit-Learn", "Pandas", "EDA"],
+  },
+  {
+    name: "Image Caption Generation",
+    kicker: "DenseNet, LSTM",
+    summary:
+      "End-to-end sequence-generation pipeline that describes images in natural language.",
+    image: "/icg.webp",
+    details: [
+      "Implemented DenseNet as a convolutional feature extractor to capture visual features from input images.",
+      "Combined the extracted features with an LSTM network to generate descriptive natural-language captions in an end-to-end sequence-generation pipeline.",
+    ],
+    tech: ["Python", "DenseNet", "CNN", "LSTM", "Deep Learning"],
   },
   {
     name: "Spam Detection",
