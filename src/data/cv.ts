@@ -1,4 +1,17 @@
-export const profile = {
+export interface Profile {
+  name: string;
+  title: string;
+  tagline: string;
+  location: string;
+  phone: string;
+  email: string;
+  whatsapp: string;
+  github: string;
+  linkedin: string;
+  image: string;
+}
+
+export const profile: Profile = {
   name: "Hatem Hossam Ghazy",
   title: "Machine Learning Engineer",
   tagline:
@@ -6,10 +19,10 @@ export const profile = {
   location: "Kafr El-Sheikh, Fowa, Egypt",
   phone: "01018170410",
   email: "hatm51477@gmail.com",
-  whatsapp: "01018170410", // اكتب الرقم بدون علامة + لاستخدامه في رابط الواتساب المباشر
+  whatsapp: "01018170410",
   github: "https://github.com/hatemhossamghazy",
   linkedin: "https://www.linkedin.com/in/hatem-hossam-ghazy-06b112345/",
-  image: "/WhatsApp Image 2026-03-25 at 11.45.17 PM.jpeg"
+  image: "/WhatsApp Image 2026-03-25 at 11.45.17 PM.jpeg",
 };
 
 export const about = {
@@ -89,7 +102,7 @@ export const projects: Project[] = [
     summary:
       "Ensemble pipeline predicting cardiovascular disease risk from health data.",
     image: "/cardio.webp",
-    url:"https://github.com/hatemhossamghazy/Cardiovascular-Disease-Project",
+    url: "https://github.com/hatemhossamghazy/Cardiovascular-Disease-Project",
     details: [
       "Performed exploratory data analysis (EDA) and data preprocessing on a cardiovascular health dataset to prepare it for modeling.",
       "Built an ensemble learning pipeline to predict disease risk, evaluating model performance using metrics such as precision, recall, and F1-score.",
@@ -114,7 +127,7 @@ export const projects: Project[] = [
     summary:
       "Text-classification model separating spam from legitimate messages.",
     image: "/spam.jpeg",
-    url:"https://lnkd.in/p/e8y7RTwH",
+    url: "https://lnkd.in/p/e8y7RTwH",
     details: [
       "Cleaned and preprocessed raw text data using regular expressions and standard NLP techniques to prepare it for classification.",
       "Applied NLTK and spaCy for tokenization and text processing, then trained a classification model to distinguish spam from legitimate messages.",
@@ -127,7 +140,7 @@ export const projects: Project[] = [
     summary:
       "Marketplace platform for tools and services, with AI-driven smart search.",
     image: "/agna.jpeg",
-    url:"https://github.com/hatemhossamghazy/Agna_Shakosh",
+    url: "https://github.com/hatemhossamghazy/Agna_Shakosh",
     details: [
       "Led a technical team to develop a marketplace platform for tools and services using Node.js, React, and PostgreSQL.",
       "Implemented AI-driven smart search and integrated Redis caching to optimize API performance.",
@@ -140,7 +153,7 @@ export const projects: Project[] = [
     summary:
       "A 16-bit computer designed and simulated from scratch using discrete logic.",
     image: "/cm.jpeg",
-    url:"https://github.com/hatemhossamghazy/Basic-Computer",
+    url: "https://github.com/hatemhossamghazy/Basic-Computer",
     details: [
       "Designed and simulated a 16-bit computer from scratch on Proteus using fundamental logic gates and discrete components.",
       "Built the complete ALU, common bus system, hardware registers, and hardwired control unit to execute the full Fetch-Decode-Execute cycle.",
