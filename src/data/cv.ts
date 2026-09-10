@@ -6,6 +6,7 @@ export const profile = {
   location: "Kafr El-Sheikh, Fowa, Egypt",
   phone: "01018170410",
   email: "hatm51477@gmail.com",
+  image: "/WhatsApp Image 2026-03-25 at 11.45.17 PM.jpeg"
 };
 
 export const about = {
@@ -84,6 +85,7 @@ export const projects: Project[] = [
     kicker: "DenseNet, LSTM",
     summary:
       "End-to-end sequence-generation pipeline that describes images in natural language.",
+    image: "/icg.jpeg",
     details: [
       "Implemented DenseNet as a convolutional feature extractor to capture visual features from input images.",
       "Combined the extracted features with an LSTM network to generate descriptive natural-language captions in an end-to-end sequence-generation pipeline.",
@@ -95,6 +97,7 @@ export const projects: Project[] = [
     kicker: "Ensemble Learning & ML Pipelines",
     summary:
       "Ensemble pipeline predicting cardiovascular disease risk from health data.",
+    image: "/cardio.jpeg",
     details: [
       "Performed exploratory data analysis (EDA) and data preprocessing on a cardiovascular health dataset to prepare it for modeling.",
       "Built an ensemble learning pipeline to predict disease risk, evaluating model performance using metrics such as precision, recall, and F1-score.",
@@ -106,6 +109,7 @@ export const projects: Project[] = [
     kicker: "NLP, NLTK, spaCy",
     summary:
       "Text-classification model separating spam from legitimate messages.",
+    image: "/spam.jpeg",
     details: [
       "Cleaned and preprocessed raw text data using regular expressions and standard NLP techniques to prepare it for classification.",
       "Applied NLTK and spaCy for tokenization and text processing, then trained a classification model to distinguish spam from legitimate messages.",
@@ -117,6 +121,7 @@ export const projects: Project[] = [
     kicker: "Full-Stack Marketplace & Service Platform",
     summary:
       "Marketplace platform for tools and services, with AI-driven smart search.",
+    image: "/agna.jpeg",
     details: [
       "Led a technical team to develop a marketplace platform for tools and services using Node.js, React, and PostgreSQL.",
       "Implemented AI-driven smart search and integrated Redis caching to optimize API performance.",
@@ -128,6 +133,7 @@ export const projects: Project[] = [
     kicker: "Proteus, Digital Logic",
     summary:
       "A 16-bit computer designed and simulated from scratch using discrete logic.",
+    image: "/cm.jpeg",
     details: [
       "Designed and simulated a 16-bit computer from scratch on Proteus using fundamental logic gates and discrete components.",
       "Built the complete ALU, common bus system, hardware registers, and hardwired control unit to execute the full Fetch-Decode-Execute cycle.",
